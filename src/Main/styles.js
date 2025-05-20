@@ -1,3 +1,4 @@
+// src/screens/Auth/RegisterScreen.js
 import styled from "styled-components/native";
 
 import { Platform, StatusBar } from "react-native";
