@@ -14,9 +14,9 @@ export default function Auth() {
     const backAction = () => {
       if (activeScreen !== "auth") {
         setActiveScreen("auth");
-        return true; // previne o comportamento padrão (sair do app)
+        return true;
       }
-      return false; // permite sair do app se já estiver em "auth"
+      return false;
     };
 
     const backHandler = BackHandler.addEventListener(
@@ -24,7 +24,7 @@ export default function Auth() {
       backAction
     );
 
-    return () => backHandler.remove(); // limpa ao desmontar
+    return () => backHandler.remove(); 
   }, [activeScreen]);
 
   return (
