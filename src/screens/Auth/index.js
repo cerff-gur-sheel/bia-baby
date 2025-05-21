@@ -1,6 +1,8 @@
 // src/screens/Auth/RegisterScreen.js
-import { useState, useEffect, View } from "react";
+import { View } from "react-native";
+import { useEffect, useState } from "react";
 import { BackHandler } from "react-native";
+
 
 import HomeAuth from "./HomeAuth.js";
 import RegisterScreen from "./RegisterScreen.js";
