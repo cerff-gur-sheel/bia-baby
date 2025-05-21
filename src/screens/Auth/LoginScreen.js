@@ -1,14 +1,22 @@
 // src/screens/Auth/LoginScreen.js
-import { Button, View, Text } from "react-native";
+import { Button, View, Text, Image } from "react-native";
 import { Container, Input } from "./styles";
 
 export default function LoginScreen() {
   return (
     <Container>
-      <Text>Login</Text>
-      <Input placeholder="Email" />
+      {/* <Image></Image> */}
+
+      
+      <Input 
+        placeholder="Email" 
+        
+        />
+
       <Input placeholder="Senha" />
-      <Button title="Entrar com Google" />
+      <Button title="Entrar" />
+      <Text>ou</Text>
+      <Button title="Entrar com o Google" />
     </Container>
   );
 }

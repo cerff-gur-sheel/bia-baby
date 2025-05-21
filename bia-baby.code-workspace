@@ -7,12 +7,9 @@
 	"settings": {},
 	"extensions": {
 		"recommendations": [
+			"esbenp.prettier-vscode",
 			"skyran.js-jsx-snippets",
-			"blanu.vscode-styled-jsx",
-			"NuclleaR.vscode-extension-auto-import",
-			"angelorafael.jsx-html-tags",
-			"geometricapplications.reline",
-			"esbenp.prettier-vscode"
+			"styled-components.vscode-styled-components"
 		],
 		"unwantedRecommendations": []
 	}
