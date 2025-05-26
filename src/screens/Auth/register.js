@@ -1,6 +1,6 @@
 // src/screens/Auth/RegisterScreen.js
 import { Text, Button } from "react-native";
-import { Container, Input } from "./styles";
+// import { Container, Input } from "./styles";
 
 export default function RegisterScreen() {
   return (

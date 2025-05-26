@@ -4,12 +4,35 @@
 			"path": "./"
 		}
 	],
-	"settings": {},
+	"settings": {
+		// explorer settings
+    	"explorer.compactFolders": false,
+    	"files.autoSave": "onFocusChange",
+     	"explorer.fileNesting.enabled": true,
+    	"explorer.fileNesting.expand": false,
+    	"explorer.fileNesting.patterns": {
+    	  "*": "*.meta",
+    	  "*.cs": "*.cs.uid",
+    	  "*.csproj": "*.sln",
+    	  "*.gd": "*.gd.uid",
+    	  "*.svg": "*.svg.import"
+    	},
+    	"files.exclude": {
+    	  "**\/CVS": true,
+    	  "**\/.DS_Store": true,
+    	  "**\/.hg": true,
+    	  "**\/.svn": true,
+    	  "**\/.git": true,
+    	  ".vscode": true,
+    	  "node_modules": true
+		},
+	},
 	"extensions": {
 		"recommendations": [
 			"esbenp.prettier-vscode",
 			"skyran.js-jsx-snippets",
-			"styled-components.vscode-styled-components"
+			"styled-components.vscode-styled-components",
+			"christian-kohler.path-intellisense"
 		],
 		"unwantedRecommendations": []
 	}

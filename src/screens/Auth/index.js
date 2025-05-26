@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { BackHandler } from "react-native";
 
 
-import HomeAuth from "./HomeAuth.js";
-import RegisterScreen from "./RegisterScreen.js";
-import LoginScreen from "./LoginScreen.js";
+import HomeAuth from "./home.js";
+import RegisterScreen from "./register.js";
+import LoginScreen from "./login.js";
 
 export default function Auth() {
-  const [activeScreen, setActiveScreen] = useState("auth"); // "auth", "login", "register"
+  const [activeScreen, setActiveScreen] = useState("login"); // "auth", "login", "register"
   useEffect(() => {
     const backAction = () => {
       if (activeScreen !== "auth") {
@@ -37,6 +37,7 @@ export default function Auth() {
       )}
       {activeScreen === "login" && <LoginScreen />}
       {activeScreen === "register" && <RegisterScreen />}
+      
     </View>
   );
 }

@@ -9,3 +9,6 @@ export const Container = styled.SafeAreaView`
   flex: 1;
   margin-top: ${isAndroid ? `${StatusBar.currentHeight}px` : 0};
 `;
+
+
+
