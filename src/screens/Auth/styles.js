@@ -1,13 +1,14 @@
 // src/screens/Auth/styles.js
 import styled from "styled-components";
-import { InputContainer as InputBase, ButtonContainer as ButtonBase } from '../../Components/Containers';
+import { colors } from "../../styles/styles";
+import { Dimensions } from "react-native";
 
-export const InputContainer = styled(InputBase)`
-  width: 100%;
-`;
+const { width } = Dimensions.get("window");
 
-export const ButtonContainer = styled(ButtonBase)`
-  width: 100%;
+export const Image = styled.Image`
+  width: ${width * 0.9}px;
+  height: ${(width * 0.9) * (200 / 320)}px; /* Mantém a proporção original */
+  margin-bottom: ${width * 0.05}px;
 `;
 
 export const Container = styled.View`
@@ -16,18 +17,10 @@ export const Container = styled.View`
   padding-top: 60px;
   margin: 0 25%;
   gap: 14px;
+  width: 60%;
+  height: 80%;
  `;
 
 export const DivisionText = styled.Text`
-    color: #62C682;
-    white-space: nowrap;
+    color: ${colors.text.or_auth};
   `;
-
-export const EnterButton = styled.TouchableOpacity`
-    background-color: #62C682;
-    color: #fff;
-    border-radius: 25px;
-    padding: 16px;  
-    width: 100%;
-    align-items: center;
-`;
