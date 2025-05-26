@@ -17,6 +17,7 @@
     "expo-web-browser": "^14.1.6",
     "react": "19.0.0",
     "react-native": "0.79.2",
+    "react-native-navigation-bar-color": "^2.0.2",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
