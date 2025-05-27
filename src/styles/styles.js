@@ -22,12 +22,14 @@ export const colors = {
                 text: PINK,
                 border: PINK,
                 inputBorder: PINK,
+                footer: PINK
             },
             register: {
                 background: PINK,
                 text: WHITE,
                 border: YELLOW,
                 inputBorder: YELLOW,
+                footer: GREEN
             },
         }
     },

@@ -19,7 +19,7 @@ import google from '../../../assets/google.png';
 import { colors } from '../../styles/styles';
 
 export default function Auth() {
-  const [activeScreen, setActiveScreen] = useState("login"); // "login", "register"
+  const [activeScreen, setActiveScreen] = useState("register"); // "login", "register"
   useEffect(() => {
     const backAction = () => {
       alert("Pressione novamente para sair");
@@ -115,7 +115,7 @@ function LoginScreen() {
           }}
         />
       </Content>
-      <Footer style={{ backgroundColor: colors.screen.auth.register.background }}/>
+      <Footer style={{ backgroundColor: colors.screen.auth.login.footer }}/>
     </Container>
   );
 }
@@ -187,7 +187,7 @@ function RegisterScreen() {
           onPress={() => console.log("Register", crendentials)}
         />
       </Content>
-    <Footer />
+      <Footer style={{ backgroundColor: colors.screen.auth.register.footer }}/>
     </Container>
   );
 }
