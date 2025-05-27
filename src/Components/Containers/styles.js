@@ -5,7 +5,7 @@ export const Container = styled.View`
   flex-direction: row;
   align-items: center;
   border: 1.8px solid;
-  border-color: ${({ borderColor }) => borderColor ||  colors.text_input.border };
+  border-color: ${({ borderColor }) => borderColor  };
   border-radius: 25px;
   height: 45px ;
   gap: 6px;

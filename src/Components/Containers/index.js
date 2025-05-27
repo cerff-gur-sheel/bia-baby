@@ -5,18 +5,18 @@ import { colors } from "../../styles/styles";
 export function InputContainer({ 
     image, 
     placeholder, 
-    borderColor, 
     onChangeText, 
     value, 
     secureTextEntry = false,
     style = {
       backgroundColor: 'transparent',
-      color: '#000'
+      color: '#000',
+      borderColor: '#000'
     }
   }) {
   return (
     <Container 
-      borderColor={borderColor} 
+      borderColor={style.borderColor} 
       style={{ backgroundColor: style.backgroundColor }}>
         {image && <Image source={image} style={style?.Image} />}
         <TextInput 
