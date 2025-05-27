@@ -20,7 +20,7 @@ export const Image = styled.Image`
 export const TextInput = styled.TextInput`
     flex: 1;
     font-weight: bold;
-`;
+ `;
 
 export const Text = styled.Text`
     flex: 1;

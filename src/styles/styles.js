@@ -20,10 +20,14 @@ export const colors = {
             login: {
                 background: WHITE,
                 text: PINK,
+                border: PINK,
+                inputBorder: PINK,
             },
             register: {
                 background: PINK,
                 text: WHITE,
+                border: YELLOW,
+                inputBorder: YELLOW,
             },
         }
     },

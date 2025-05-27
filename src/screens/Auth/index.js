@@ -1,14 +1,14 @@
 // src/screens/Auth/RegisterScreen.js
 import { useEffect, useState } from "react";
-import { View, BackHandler, Text, Button } from "react-native";
+import { View, BackHandler, Text } from "react-native";
 import { InputContainer, ButtonContainer } from '../../Components/Containers';
-import { Container, DivisionText, Image } from './styles';
+import { RegisterButton, Container, Content, DivisionText, Image, RegisterText } from './styles';
 
 import logo from '../../../assets/biababylogo.jpg';
+// import userPhoto from '../../../assets/userphoto.png'
 import avatar from '../../../assets/avatar.png'
 import google from '../../../assets/google.png'
 import { colors } from '../../styles/styles';
-
 
 export default function Auth() {
   const [activeScreen, setActiveScreen] = useState("login"); // "login", "register"
@@ -34,21 +34,79 @@ export default function Auth() {
     <View>
       {activeScreen === "login" && <LoginScreen />}
       {activeScreen === "register" && <RegisterScreen />}
-      
     </View>
   );
 }
 
 
 function LoginScreen() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    // TODO: Implement login logic here
+    console.log("Email:", email);
+    console.log("Password:", password);
+  }
+
+  const handleGoogleLogin = () => {
+    // TODO: Implement Google login logic here
+    console.log("Login with Google");
+  }
+  
   return (
     <Container style={{ backgroundColor: colors.screen.auth.login.background }}>
+      <Content>
       <Image source={logo} />
-      <InputContainer image={avatar} text='E-mail' textColor={colors.screen.auth.login.text} />
-      <InputContainer image={avatar} text='Senha' textColor={colors.screen.auth.login.text} />
-      <ButtonContainer text='ENTRAR' backgroundColor={colors.button.confirm.background} style={{ Text: { color: colors.button.confirm.text } }} />
-      <DivisionText>---------------- ou ----------------- </DivisionText>
-      <ButtonContainer image={google} text='Entrar com Google' borderColor={colors.button.google.text} />
+      <InputContainer 
+        image={avatar} 
+        placeholder='E-mail' 
+        
+        onChangeText={setEmail}
+        value={email}
+        
+        style={{
+          color: colors.screen.auth.login.text,
+          borderColor: colors.screen.auth.login.inputBorder
+        }}
+      />
+      <InputContainer 
+        image={avatar} 
+        placeholder='Senha' 
+        secureTextEntry={true} 
+        
+        onChangeText={setPassword}
+        value={password}
+        
+        style={{
+          color: colors.screen.auth.login.text,
+          borderColor: colors.screen.auth.login.inputBorder
+        }}
+      />
+      <ButtonContainer 
+        placeholder='ENTRAR' 
+        
+        onPress={handleLogin}
+        
+        style={{
+          backgroundColor: colors.button.confirm.background,
+          borderColor: colors.button.confirm.background, 
+          color: colors.button.confirm.text 
+        }} 
+      />
+      <DivisionText>
+        ---------------- ou ----------------- 
+      </DivisionText>
+      <ButtonContainer 
+        image={google} 
+        placeholder='Entrar com Google' 
+        
+        onPress={handleGoogleLogin}
+        style={{
+          color: colors.button.google.text
+        }}
+      />
+      </Content>
    </Container>
   );
 }
@@ -56,17 +114,13 @@ function LoginScreen() {
 
 function RegisterScreen() {
   return (
-    <Container>
-      <Text>Register</Text>
-
-      <Input placeholder="Nome" />
-      <Input placeholder="Sobrenome" />
-      <Input placeholder="Email" />
-      <Input placeholder="Senha" />
-      <Input placeholder="Confirmar Senha" />
-
-      <Button title="Cadastrar" />
-      <Button title="Continuar com Google" />
-    </Container>
+    <Container 
+      style={{ 
+        backgroundColor: colors.screen.auth.register.background,
+      }}>
+        <Content>
+          <Text>TESTE</Text>
+        </Content>
+   </Container>
   );
 }

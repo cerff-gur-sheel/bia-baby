@@ -2,30 +2,61 @@
 import { Container, TextInput, Text, Image } from "./styles";
 import { colors } from "../../styles/styles";
 
-export function InputContainer({ image, text = '#000', textColor = '#000', borderColor}) {
+export function InputContainer({ 
+    image, 
+    placeholder, 
+    borderColor, 
+    onChangeText, 
+    value, 
+    secureTextEntry = false,
+    style = {
+      backgroundColor: 'transparent',
+      color: '#000'
+    }
+  }) {
   return (
-    <Container borderColor={borderColor}>
-      <Image source={image} />
-      <TextInput placeholder={text} placeholderTextColor={textColor} style={{ color: textColor }} />
+    <Container 
+      borderColor={borderColor} 
+      style={{ backgroundColor: style.backgroundColor }}>
+        {image && <Image source={image} style={style?.Image} />}
+        <TextInput 
+          placeholder={placeholder} 
+          placeholderTextColor={style.color} 
+          style={{
+            textAlign: 'start',
+            color: style.color,
+            paddingLeft: image ? 0 : 30,
+          }}
+          onChangeText={onChangeText} 
+          value={value}
+          secureTextEntry={secureTextEntry}
+        />
     </Container>
   );
 };
 
-export function ButtonContainer({ image, text, onPress, borderColor, backgroundColor, style }) {
+export function ButtonContainer({ 
+    image, 
+    placeholder, 
+    onPress, 
+    style = {
+      backgroundColor: '#000',
+      borderColor: '#000'
+    }
+  }) {
   return (
     <Container
-      borderColor={borderColor || backgroundColor}
+      borderColor={style.borderColor || style.backgroundColor}
       onPress={onPress}
-      style={[style?.Container, { backgroundColor: backgroundColor || 'transparent' }]}
-    >
-      {image && <Image source={image} style={style?.Image} />}
-      <Text
-        style={{
-          textAlign: image === undefined ? 'center' : 'start',
-          color: backgroundColor === undefined ? colors.button.text_black : colors.button.text_white
-        }}
-      > 
-        {text}
+      style={{ backgroundColor: style.backgroundColor || 'transparent' }}
+      >
+        {image && <Image source={image} style={style?.Image} />}
+        <Text
+          style={{
+            textAlign: image === undefined ? 'center' : 'start',
+            color: style.backgroundColor === undefined ? colors.button.text_black : colors.button.text_white
+        }}> 
+          {placeholder}
       </Text>
     </Container>
   );
