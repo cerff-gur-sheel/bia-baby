@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "@react-navigation/native": "^7.1.8",
-    "expo": "~53.0.8",
+    "expo": "^53.0.9",
     "expo-auth-session": "^6.1.5",
+    "expo-sqlite": "~15.2.10",
     "expo-status-bar": "~2.2.3",
     "expo-web-browser": "^14.1.6",
     "react": "19.0.0",

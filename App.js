@@ -2,8 +2,8 @@ import { useFonts } from "expo-font";
 
 import Main from "./src/Main";
 
-import { SQLiteProvider } from "expo-sqlite";
-import { initializeDatabase } from "./src/database/initializeDatabase";
+// import { SQLiteProvider } from "expo-sqlite";
+// import { initializeDatabase } from "./src/database/initializeDatabase";
 
 export default function App() {
   // const [isFontsLoaded] = useFonts({
@@ -17,9 +17,8 @@ export default function App() {
   // }
 
   return (
-    <SQLiteProvider databaseName="test.db" onInit={initializeDatabase}>
+    // <SQLiteProvider databaseName="test.db" onInit={initializeDatabase}>
       <Main />
-    </SQLiteProvider>
+    // </SQLiteProvider>
   );
-  
 }
