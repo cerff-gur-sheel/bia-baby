@@ -8,8 +8,8 @@ export const View = styled.View`
 
 export const Container = styled.View`
     background-color: pink;
-    margin-top: 70px;
-    margin-bottom: 100px;
+    margin-top: 65px;
+    margin-bottom: 8%;
     width: 100%;
     height: 83%;
 `;

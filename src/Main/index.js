@@ -1,23 +1,18 @@
-import { useState } from "react";
-import Auth from "../screens/Auth/index.js";
-import Home from "../screens/Home/index.js";
-import { Container } from "./styles.js";
-import UpperBar from "../Components/UpperBar";
-import Footer from "../Components/Footer/index.js";
-
-const screens = Object.freeze({
-  auth: 'auth',
-  home: 'home'
-});
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { View, Text } from 'react-native';
+import Auth from '../Auth';
 
 export default function Main() {
-  const [screen, setScreen] = useState(screens.home)
-
-  return (
-    <Container>
-      {/* <UpperBar /> */}
-      { screen == screens.auth && <Auth /> }
-      { screen == screens.home && <Home /> }
-    </Container>
-  );
+    const insets = useSafeAreaInsets();
+    return (
+        <View style={{ 
+            paddingTop: insets.top, 
+            paddingBottom: insets.bottom,
+            paddingLeft: insets.left,
+            paddingRight: insets.right,
+            flex: 0 
+        }}>
+            <Auth />
+        </View>
+    );
 }
