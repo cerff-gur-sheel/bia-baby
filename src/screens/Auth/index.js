@@ -18,8 +18,13 @@ import avatar from '../../../assets/avatar.png';
 import google from '../../../assets/google.png';
 import { colors } from '../../styles/styles';
 
+const authPages = Object.freeze({
+  login: 'login',
+  register: 'register'
+})
+
 export default function Auth() {
-  const [activeScreen, setActiveScreen] = useState("register"); // "login", "register"
+  const [activeScreen, setActiveScreen] = useState(authPages.login); // "login", "register"
   useEffect(() => {
     const backAction = () => {
       alert("Pressione novamente para sair");
@@ -40,8 +45,8 @@ export default function Auth() {
 
   return (
     <View>
-      {activeScreen === "login" && <LoginScreen />}
-      {activeScreen === "register" && <RegisterScreen />}
+      {activeScreen === authPages.login && <LoginScreen />}
+      {activeScreen === authPages.register && <RegisterScreen />}
     </View>
   );
 }
@@ -134,7 +139,7 @@ function RegisterScreen() {
       <Content>
         <NewUserImage source={user} />
         <RegisterText>Cadastre-se</RegisterText>
-        <Text>----------------</Text>
+        <RegisterText>----------------</RegisterText>
         <InputContainer
           placeholder='Nome' 
 
