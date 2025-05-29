@@ -5,11 +5,15 @@ import { View, Container, LogoImage, EnterButton } from "./style";
 
 import IconTextInput from "../components/IconTextInput";
 
+import { BackgroundProvider, BackgroundContext } from '../context/BackgroundProvider';
+import { useContext, useEffect } from 'react';
+
+
 import google from '../../assets/google.png';
 
 import logo from '../../assets/biababylogo.jpg';
 import avatar from '../../assets/avatar.png';
-import { button } from "../styles/colors";
+import { auth, button } from "../styles/colors";
 import IconButton from "../components/IconButton";
 
 const authPages = Object.freeze({
@@ -20,6 +24,11 @@ const authPages = Object.freeze({
 
 export default function Auth(){
     const [page, setPage] = useState(authPages.login)
+    const { background, setBackground } = useContext(BackgroundContext);
+
+    useEffect(() => {
+      setBackground(auth.label);
+    },[]);
 
     return(
         <View style={{backgroundColor: "white"}}>

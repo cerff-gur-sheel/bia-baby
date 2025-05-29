@@ -6,6 +6,10 @@ export const LIGHT_YELLOW = '#FDE6A9';
 export const WHITE = '#fff';
 export const BLACK = '#000';
 
+export const auth ={
+    label: PINK
+}
+
 export const textInput = {
     backgroud: WHITE,
     text: PINK,

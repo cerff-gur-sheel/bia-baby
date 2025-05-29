@@ -9,7 +9,7 @@ function MainContent() {
   const { background, setBackground } = useContext(BackgroundContext);
 
   useEffect(() => {
-    setBackground('blue');
+    setBackground('#fff');
   }, []);
 
   return (
