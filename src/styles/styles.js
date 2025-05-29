@@ -10,6 +10,12 @@ const LIGHT_YELLOW = '#FDE6A9';
 const WHITE = '#fff';
 const BLACK = '#000';
 
+export const upperBar = {
+  colors: {
+    background: "#FFC0CB",
+  },
+};
+
 export const colors = {
     // #ef6599
     // #FEC43C
@@ -18,8 +24,8 @@ export const colors = {
     // #FDE6A9
     upperBar: {
         background: PINK,
-    }
-    ,screen: {
+    },
+    screen: {
         auth:{
             login: {
                 background: WHITE,

@@ -8,8 +8,10 @@ export default function Home() {
         <View>
             <UpperBar />
             <Container>
-                <Text>I'm here</Text>
+                <Text>I'm here </Text>
             </Container>
+            
+            <Footer />
         </View>
     );
 }

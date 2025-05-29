@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import { colors } from "../../styles/styles";
+import styled from "styled-components/native";
+import { upperBar } from "../../styles/styles";
 
 export const Container = styled.View`
   top: 2;
   position: absolute;
   width: 100%;
   height: 64px;
-  background-color: ${colors.upperBar.background};
+  background-color: ${() => upperBar.colors.background};
   z-index: 999;
 `;
 
