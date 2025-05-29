@@ -22,7 +22,7 @@ export default function Auth(){
     const [page, setPage] = useState(authPages.login)
 
     return(
-        <View>
+        <View style={{backgroundColor: "white"}}>
             {page === authPages.home && <Home />}
             {page === authPages.login && <Login />}
             {page === authPages.register && <Register />}
