@@ -1,3 +1,4 @@
+import UpperBar from "../Components/UpperBar";
 
 
 // Cores principais
@@ -15,7 +16,10 @@ export const colors = {
     // #62C682
     // #65C4F5
     // #FDE6A9
-    screen: {
+    upperBar: {
+        background: PINK,
+    }
+    ,screen: {
         auth:{
             login: {
                 background: WHITE,
