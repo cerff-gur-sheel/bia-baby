@@ -10,7 +10,7 @@ import {
 
 import IconTextInput from "../components/IconTextInput";
 
-import { BackgroundProvider, BackgroundContext } from '../context/BackgroundProvider';
+import { BackgroundContext } from '../context/BackgroundProvider';
 import { useContext, useEffect } from 'react';
 
 

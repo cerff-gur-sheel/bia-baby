@@ -30,3 +30,9 @@ export const button = {
     text: WHITE,
     border: GREEN
 }
+
+export const search_bar = {
+  backgroud: PINK,
+  border: '#ccc',
+  textBackground: WHITE
+}
