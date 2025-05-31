@@ -1,14 +1,11 @@
-import { StatusBar } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Container, TextInput} from "./style";
-import { search_bar } from "../../styles/colors";
 
 export default function SearchBar() {
+  const insets = useSafeAreaInsets();
+
   return (
-      <Container >
-        <StatusBar
-          backgroundColor={search_bar.backgroud}
-          barStyle="dark-content"
-        />
+      <Container style={{marginTop: insets.top}}>
         <TextInput
           placeholder="Buscar no Bia Kids."
           clearButtonMode="while-editing"

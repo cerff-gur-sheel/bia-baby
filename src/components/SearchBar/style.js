@@ -3,10 +3,16 @@ import { search_bar } from "../../styles/colors";
 
 
 export const Container = styled.View`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: ${search_bar.backgroud};
   align-items: center;
   height: 72px;
+  z-index: 10;
 `;
+
 
 export const TextInput = styled.TextInput`
   background-color: ${search_bar.textBackground};
