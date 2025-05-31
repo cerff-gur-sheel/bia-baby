@@ -7,28 +7,32 @@ export const WHITE = '#fff';
 export const BLACK = '#000';
 
 export const auth ={
-    home: {
-        backgroud: WHITE
-    },
-    login: {
-        backgroud: PINK
-    },
-    register:{
-        backgroud: GREEN,
-        container: PINK
-    }
+  home: {
+    backgroud: WHITE
+  },
+  login: {
+    backgroud: PINK
+  },
+  register:{
+    backgroud: GREEN,
+    container: PINK
+  }
+}
+
+export const home = {
+  bars_background: PINK
 }
 
 export const textInput = {
-    backgroud: WHITE,
-    text: PINK,
-    border: PINK
+  backgroud: WHITE,
+  text: PINK,
+  border: PINK
 }
 
 export const button = {
-    backgroud: GREEN,
-    text: WHITE,
-    border: GREEN
+  backgroud: GREEN,
+  text: WHITE,
+  border: GREEN
 }
 
 export const search_bar = {

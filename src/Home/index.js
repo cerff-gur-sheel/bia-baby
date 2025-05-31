@@ -1,23 +1,22 @@
-import { BackgroundContext } from '../context/BackgroundProvider';
 import { useContext, useEffect } from 'react';
+import { BackgroundContext } from '../context/BackgroundProvider';
 
-
-import SearchBar from "../components/SearchBar"
+import CatalogView from '../components/CatalogView'
 import { Text } from "../components/Text";
-import { View } from './style'
+
+import { Container } from './style'; 
+import { home } from '../styles/colors';
 
 
-export default function Home(){
-	const { background, setBackground } = useContext(BackgroundContext);
-	useEffect(() => { setBackground(); },[]);
+export default function Home() {
+  const { background, setBackground } = useContext(BackgroundContext);
+  useEffect(() => { setBackground(home.bars_background) }, []);
 
-
-  return(
-    <>
-      <SearchBar/>
-      <View>
-        <Text>Teste</Text>
-      </View>
-    </>
+  return (
+    <CatalogView footer={true} searchBar={true}>
+      <Container>
+        <Text>teste</Text>
+      </Container>
+    </CatalogView>
   );
 }

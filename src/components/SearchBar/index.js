@@ -5,7 +5,7 @@ export default function SearchBar() {
   const insets = useSafeAreaInsets();
 
   return (
-      <Container style={{marginTop: insets.top}}>
+      <Container style={{}}>
         <TextInput
           placeholder="Buscar no Bia Kids."
           clearButtonMode="while-editing"
