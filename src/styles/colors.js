@@ -23,6 +23,10 @@ export const home = {
   bars_background: PINK
 }
 
+export const catalog = {
+  bars: PINK
+}
+
 export const textInput = {
   backgroud: WHITE,
   text: PINK,

@@ -5,5 +5,5 @@ export const Text = styled.Text`
   color: ${({ color }) => color || '#333'};
   font-size: ${({ size }) => size ? `${size}px` : '16px'};
   opacity: ${({ opacity }) => opacity || 1};
-  font-weight: ${({ weight }) => weight || 'none'};
+  font-weight: ${({ weight }) => weight || 'bold'};
 `;
