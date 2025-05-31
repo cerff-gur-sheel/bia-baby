@@ -8,9 +8,9 @@ function MainContent() {
   const insets = useSafeAreaInsets();
   const { background, setBackground } = useContext(BackgroundContext);
 
-  useEffect(() => {
-    setBackground('#fff');
-  }, []);
+  // useEffect(() => {
+  //   setBackground('#fff');
+  // }, []);
 
   return (
     <View style={{ 

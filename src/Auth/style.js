@@ -26,9 +26,19 @@ export const LogoImage = styled.Image`
 
 export const EnterButton = styled.TouchableOpacity`
     background-color: #62C682;
-    height: 50px;
-    width: 100%;
+    height: ${({ smallButton }) => smallButton == true ? '52px' : '50px'};
+    width: ${({ smallButton }) => smallButton == true ? '52px' : '100%'};
     align-items: center;
     justify-content: center;
     border-radius: 50px;
+`;
+
+export const TextInput = styled.TextInput`
+  border: yellow 2px solid;
+  border-radius: 50px;
+  width: 100%;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 `;

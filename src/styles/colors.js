@@ -7,7 +7,16 @@ export const WHITE = '#fff';
 export const BLACK = '#000';
 
 export const auth ={
-    label: PINK
+    home: {
+        backgroud: WHITE
+    },
+    login: {
+        backgroud: PINK
+    },
+    register:{
+        backgroud: GREEN,
+        container: PINK
+    }
 }
 
 export const textInput = {
