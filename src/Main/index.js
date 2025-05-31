@@ -1,16 +1,21 @@
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { View } from 'react-native';
-import Auth from '../Auth';
+import { useContext, useState } from 'react';
 import { BackgroundProvider, BackgroundContext } from '../context/BackgroundProvider';
-import { useContext, useEffect } from 'react';
+
+import Home from '../Home';
+import Auth from '../Auth';
+
+const screens = Object.freeze({
+  home: 'home',
+  auth: 'auth'
+})
 
 function MainContent() {
   const insets = useSafeAreaInsets();
-  const { background, setBackground } = useContext(BackgroundContext);
+  const { background } = useContext(BackgroundContext);
 
-  // useEffect(() => {
-  //   setBackground('#fff');
-  // }, []);
+  const [screen, setScreeen] = useState(screens.auth)
 
   return (
     <View style={{ 
@@ -21,10 +26,12 @@ function MainContent() {
       flex: 1,
       backgroundColor: background,
     }}>
-      <Auth />
+      {screen == screens.auth && <Auth />}
+      {screen == screens.home && <Home />}
     </View>
   );
 }
+
 
 export default function Main() {
   return (

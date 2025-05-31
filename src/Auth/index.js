@@ -28,7 +28,7 @@ const authPages = Object.freeze({
 })
 
 export default function Auth(){
-	const [page, setPage] = useState(authPages.register)
+	const [page, setPage] = useState(authPages.login)
 
 
 	return(
