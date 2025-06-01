@@ -21,4 +21,5 @@ export const Image = styled.Image`
 export const Text = styled.Text`
   color: white;
   font-weight: bold;
+  font-size: 19px;
 `;
