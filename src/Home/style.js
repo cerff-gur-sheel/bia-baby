@@ -7,7 +7,6 @@ export const CategoryContainer = styled.View`
   background-color: white;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 50px;
   margin-bottom: 50px;
 `;
 
