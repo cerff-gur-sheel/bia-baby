@@ -4,11 +4,12 @@ import { BackgroundContext } from '../context/BackgroundProvider';
 import CatalogView from '../components/CatalogView'
 import { Text } from "../components/Text";
 
-import { Container } from './style'; 
+import { Container, CategoryContainer } from './style'; 
 import { home } from '../styles/colors';
 import CategoryButton from '../components/CategoryButton';
 
 import clotches from '../../assets/clotches.jpg'
+import ImageCarousel from '../components/ImageCarousel';
 
 export default function Home() {
   const { background, setBackground } = useContext(BackgroundContext);
@@ -17,8 +18,11 @@ export default function Home() {
   return (
     <CatalogView footer={true} searchBar={true}>
       <Container>
-         <CategoryButton image={clotches} categoryName={"Roupas Infantis"}/>
-         <CategoryButton image={clotches} categoryName={"Roupas Infantis"}/>
+        <ImageCarousel/>
+        <CategoryContainer>
+          <CategoryButton image={clotches} categoryName={"Roupas Infantis"}/>
+          <CategoryButton image={clotches} categoryName={"Roupas Infantis"}/>
+        </CategoryContainer>
       </Container>
     </CatalogView>
   );
