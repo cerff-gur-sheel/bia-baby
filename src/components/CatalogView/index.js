@@ -4,7 +4,7 @@ import SearchBar from "../SearchBar";
 import Footer from '../Footer';
 
 
-export default function ProductView({ 
+export default function CatalogView({ 
     children, 
     searchBar = false, 
     footer = false 

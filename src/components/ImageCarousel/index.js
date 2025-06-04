@@ -1,8 +1,44 @@
-import { View } from "./style";
+import React from 'react';
+import { View, FlatList, Image, StyleSheet, Dimensions } from 'react-native';
 
-export default function ImageCarousel({images}) {
+const { width } = Dimensions.get('window');
+
+const ImageCarousel = ({ images }) => {
   return (
-    <View>
+    <View style={styles.container}>
+      <FlatList
+        data={images}
+        keyExtractor={(_, index) => index.toString()}
+        horizontal
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        renderItem={({ item }) => {
+          console.log('image item:', item , " ");
+          return (
+            <View style={styles.imageContainer}>
+              <Image source={item} style={styles.image} />
+            </View>
+          );
+        }}/>
     </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    height: 250,
+  },
+  imageContainer: {
+    width,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  image: {
+    width: width * 0.9,
+    height: 220,
+    borderRadius: 12,
+    resizeMode: 'cover',
+  },
+});
+
+export default ImageCarousel;
