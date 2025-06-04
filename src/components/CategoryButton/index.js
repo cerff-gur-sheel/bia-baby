@@ -1,8 +1,8 @@
 import { Button, Image, Text } from "./style";
 
-export default function CategoryButton({image, categoryName, callProdutcList}) {
+export default function CategoryButton({image, categoryName, onPress }) {
   return(
-    <Button onPress={callProdutcList}>
+    <Button onPress={() => onPress }>
       <Image source={image} />
       <Text>{categoryName}</Text>
     </Button>

@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const Card = styled.View`
-  width: 180px;
-  height: 260px;
+  width: 185px;
   background-color: #F555;
   border-radius: 10px;
   padding: 15px;
   margin: 8px;
-  margin-bottom: 20px;
+  margin-top: 8px;
+  margin-bottom: 14px;
   align-items: center;
-  gap: 2px;
+  gap: 18px;
 `;
 
 export const ProductImage = styled.Image`
@@ -38,7 +38,6 @@ export const ProductReview = styled.Text`
 `;
 
 export const ListContainer = styled.FlatList`
-  padding: 20px 10px;
   flex: 1;
-  margin-bottom: 10px;
+  padding-top: 15px;
 `;
