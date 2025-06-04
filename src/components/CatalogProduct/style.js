@@ -15,7 +15,6 @@ export const Card = styled.View`
 export const ProductImage = styled.Image`
   width: 100%;
   height: 120px;
-  resizeMode: contain;
 `;
 
 export const ProductName = styled.Text`
