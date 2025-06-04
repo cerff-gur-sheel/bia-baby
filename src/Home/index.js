@@ -10,18 +10,14 @@ import CategoryButton from '../components/CategoryButton';
 
 import clotches from '../../assets/clotches.jpg'
 import ImageCarousel from '../components/ImageCarousel';
-import { Fashion, Party } from '../mocks/Products';
-import CatalogProduct from '../components/CatalogProduct';
 
 import photo1 from '../../assets/biababylogo.jpg';
 import photo2 from '../../assets/biababylogo.jpg';
 import photo3 from '../../assets/biababylogo.jpg';
 
-  const images = [photo1, photo2, photo3];
-
+const images = [photo1, photo2, photo3];
 
 export default function Home() {
-
   const { background, setBackground } = useContext(BackgroundContext);
   useEffect(() => { setBackground(home.bars_background) }, []);
 

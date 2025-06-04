@@ -5,19 +5,19 @@ import { BackgroundProvider, BackgroundContext } from '../context/BackgroundProv
 
 import Home from '../Home';
 import Auth from '../Auth';
-import CatalogList from '../components/CatalogList';
+import Catalog from '../Catalog';
 
 const screens = Object.freeze({
   home: 'home',
   auth: 'auth',
-  Catalog: 'catalog'
+  catalog: 'catalog'
 })
 
 function MainContent() {
   const insets = useSafeAreaInsets();
   const { background } = useContext(BackgroundContext);
 
-  const [screen, setScreeen] = useState(screens.Catalog)
+  const [screen, setScreeen] = useState(screens.catalog)
 
   return (
     <View style={{
@@ -30,7 +30,7 @@ function MainContent() {
     }}>
       {screen == screens.auth && <Auth />}
       {screen == screens.home && <Home />}
-      {screen == screens.Catalog && <CatalogList />}
+      {screen == screens.catalog && <Catalog />}
     </View>
   );
 }
