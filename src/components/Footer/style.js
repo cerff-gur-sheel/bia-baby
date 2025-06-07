@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { catalog } from "../../styles/colors";
 
 export const View = styled.View`
-  background-color: ${catalog.bars};
   position: absolute;
   left: 0;
   right: 0;

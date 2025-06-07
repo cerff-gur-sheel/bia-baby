@@ -5,7 +5,7 @@ import CatalogView from '../components/CatalogView'
 import { Text } from "../components/Text";
 
 import { Container, CategoryContainer } from './style';
-import { home } from '../styles/colors';
+import { home, PINK } from '../styles/colors';
 import CategoryButton from '../components/CategoryButton';
 
 import clotches from '../../assets/clotches.jpg'
@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => { setBackground(home.bars_background) }, []);
 
   return (
-    <CatalogView footer={true} searchBar={true}>
+    <CatalogView footer={true} searchBar={true} barColor={PINK} footerColor={PINK}>
       <Container>
         <ImageCarousel images={images} />        
         <CategoryContainer>

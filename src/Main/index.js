@@ -6,18 +6,20 @@ import { BackgroundProvider, BackgroundContext } from '../context/BackgroundProv
 import Home from '../Home';
 import Auth from '../Auth';
 import Catalog from '../Catalog';
+import Product from '../Product';
 
 const screens = Object.freeze({
   home: 'home',
   auth: 'auth',
-  catalog: 'catalog'
+  catalog: 'catalog',
+  product: 'product'
 })
 
 function MainContent() {
   const insets = useSafeAreaInsets();
   const { background } = useContext(BackgroundContext);
 
-  const [screen, setScreeen] = useState(screens.catalog)
+  const [screen, setScreeen] = useState(screens.product)
 
   return (
     <View style={{
@@ -31,6 +33,7 @@ function MainContent() {
       {screen == screens.auth && <Auth />}
       {screen == screens.home && <Home />}
       {screen == screens.catalog && <Catalog />}
+      {screen == screens.product && <Product />}
     </View>
   );
 }
