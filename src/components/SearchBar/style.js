@@ -7,7 +7,6 @@ export const Container = styled.View`
   top: 0;
   left: 0;
   right: 0;
-  background-color: ${search_bar.backgroud};
   align-items: center;
   height: 72px;
   z-index: 10;

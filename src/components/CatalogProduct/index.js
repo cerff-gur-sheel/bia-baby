@@ -1,35 +1,44 @@
 import { useState } from "react";
-import { Button } from "react-native";
-import { 
-  Card, 
-  ProductImage, 
-  ProductName, 
-  ProductPrice, 
-  ProductReview, 
-  ListContainer } from "./style";
+import {
+  CatalogListContainer,
+  CatalogCard,
+  ImageWrapper,
+  CatalogImage,
+  CatalogInfo,
+  CatalogName,
+  CatalogPrice,
+  CatalogButton,
+  CatalogButtonText
+} from "./style";
 
 import { Fashion } from "../../mocks/Products";
 
 export default function CatalogProduct() {
   const [catalogProduct, setCatalogProduct] = useState(Fashion);
   function callPurchaseScreen(catalogProduct) {
-    alert(`voce comprou o produto: ${catalogProduct.name}`)
+    alert(`vocé comprou o produto: ${catalogProduct.name}`)
   }
   return (
-    <ListContainer
+    <CatalogListContainer
       data={catalogProduct}
-      key={'2columns'}
-      numColumns={2}
       showsVerticalScrollIndicator={false}
       keyExtractor={item => item.id.toString()}
       renderItem={({ item }) => (
-        <Card>
-          <ProductName>{item.name}</ProductName>
-          <ProductImage source={item.productImage} />
-          <ProductPrice>R$ {item.productValue}</ProductPrice>
-          <ProductReview>Avaliação: {item.review}⭐</ProductReview>
-          <Button title="Comprar" onPress={() => callPurchaseScreen(item)} />
-        </Card>
-    )}/>
+        <CatalogCard>
+
+          <ImageWrapper>
+            <CatalogImage source={item.image} />
+          </ImageWrapper>
+          
+          <CatalogInfo>
+            <CatalogName>{item.name}</CatalogName>
+            <CatalogPrice>R$ {item.price.toFixed(2).replace('.', ',')}</CatalogPrice>
+            <CatalogButton onPress={() => callPurchaseScreen(item)}>
+              <CatalogButtonText> Comprar </CatalogButtonText>
+            </CatalogButton>
+          </CatalogInfo>
+
+        </CatalogCard>
+      )} />
   );
 }

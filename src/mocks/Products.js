@@ -1,19 +1,19 @@
 
 
 export const Fashion = [
-    { id: 1, name: 'Produto 1', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 2, name: 'Produto 2', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 3, name: 'Produto 3', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 4, name: 'Produto 4', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 5, name: 'Produto 5', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 6, name: 'Produto 6', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
+    { id: 1, name: 'Body Ursinho Azul', image: require('../../assets/Product1.png'), price: 59.90, review: 4.5, description: 'Camisa 100% algodão, ideal para o verão.' },
+    { id: 2, name: 'Produto 2', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 3, name: 'Produto 3', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 4, name: 'Produto 4', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 5, name: 'Produto 5', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 6, name: 'Produto 6', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
 ];
 
 export const Party = [
-    { id: 7, name: 'Produto 7', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 8, name: 'Produto 8', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 9, name: 'Produto 9', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 10, name: 'Produto 10', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 11, name: 'Produto 11', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
-    { id: 12, name: 'Produto 12', productImage: require('../../assets/ImagePlaceHolder.png'), productValue: 0, review: 0 },
+    { id: 7, name: 'Produto 7', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 8, name: 'Produto 8', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 9, name: 'Produto 9', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 10, name: 'Produto 10', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 11, name: 'Produto 11', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { id: 12, name: 'Produto 12', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
 ]
