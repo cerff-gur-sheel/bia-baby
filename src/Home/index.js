@@ -8,6 +8,7 @@ import { Container, CategoryContainer } from './style';
 import { home } from '../styles/colors';
 import CategoryButton from '../components/CategoryButton';
 
+import party from '../../assets/party.jpg'
 import clotches from '../../assets/clotches.jpg'
 import ImageCarousel from '../components/ImageCarousel';
 
@@ -27,7 +28,7 @@ export default function Home() {
         <ImageCarousel images={images} />        
         <CategoryContainer>
           <CategoryButton image={clotches} categoryName={"Roupas Infantis"} />
-          <CategoryButton image={clotches} categoryName={"Artigos para Festa"} />
+          <CategoryButton image={party} categoryName={"Artigos para Festa"} />
         </CategoryContainer>
       </Container>
     </CatalogView>
