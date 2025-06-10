@@ -11,18 +11,16 @@ import {
   CatalogButtonText
 } from "./style";
 
-import { Fashion } from "../../mocks/Products";
-
 import { useNavigation, screens } from '../../context/NavigationContext';
 
 export default function CatalogProduct() {
-  const [catalogProduct, setCatalogProduct] = useState(Fashion);
-  const { screen, setScreen } = useNavigation();
-
+  const { setScreen, props } = useNavigation();
+  const [catalogProduct ] = useState(props.category);
+  
   function callPurchaseScreen(catalogProduct) {
     setScreen(screens.product);
     // setScreen(screens.product)
-    // alert(`vocé comprou o produto: ${catalogProduct.name}`)
+    alert(`vocé comprou o produto: ${catalogProduct.name}`)
   }
   return (
     <CatalogListContainer

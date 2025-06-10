@@ -10,13 +10,15 @@ export const screens = Object.freeze({
 const NavigationContext = createContext({
   screen: screens.home,
   setScreen: () => {},
+  props: () => {},
+  setProps: () => {},
 });
 
 export const NavigationProvider = ({ children }) => {
   const [screen, setScreen] = useState(screens.home);
-
+  const [props, setProps] = useState({})
   return (
-    <NavigationContext.Provider value={{ screen, setScreen }}>
+    <NavigationContext.Provider value={{ screen, setScreen, props, setProps }}>
       {children}
     </NavigationContext.Provider>
   );

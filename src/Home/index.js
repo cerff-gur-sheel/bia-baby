@@ -1,8 +1,7 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect} from 'react';
 import { BackgroundContext } from '../context/BackgroundProvider';
 
 import CatalogView from '../components/CatalogView'
-import { Text } from "../components/Text";
 
 import { Container, CategoryContainer } from './style';
 import { home, PINK } from '../styles/colors';
@@ -18,11 +17,11 @@ import photo3 from '../../assets/biababylogo.jpg';
 
 const images = [photo1, photo2, photo3];
 import { useNavigation, screens } from '../context/NavigationContext';
-
+import { Fashion } from "../mocks/Products";
 
 export default function Home() {
-  const { background, setBackground } = useContext(BackgroundContext);
-  const { setScreen } = useNavigation();
+  const { setBackground } = useContext(BackgroundContext);
+  const { setScreen, setProps } = useNavigation();
   useEffect(() => { setBackground(home.bars_background) }, []);
 
   return (
@@ -31,9 +30,13 @@ export default function Home() {
         <ImageCarousel images={images} />        
         <CategoryContainer>
           <CategoryButton image={clotches} categoryName={"Roupas Infantis"} 
-            onPress={() => setScreen(screens.catalog)}/>
+            onPress={() => {
+              setScreen(screens.catalog)
+              setProps({category: Fashion})}}/>
           <CategoryButton image={party} categoryName={"Artigos para Festa"} 
-            onPress={() => setScreen(screens.catalog)}/>
+            onPress={() => {
+              setScreen(screens.catalog)
+              setProps({category: Fashion})}}/>
         </CategoryContainer>
       </Container>
     </CatalogView>
