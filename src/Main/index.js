@@ -9,26 +9,33 @@ import Auth from '../Auth';
 import Catalog from '../Catalog';
 import Product from '../Product';
 
-var loged = true
+var loged = true;
 
 function MainContent() {
   const insets = useSafeAreaInsets();
   const { background } = useContext(BackgroundContext);
   const { screen, setScreen } = useNavigation();
+
   useEffect(() => {
-    if (loged !== true) {setScreen(screens.auth)} else {setScreen(screens.home)}
+    if (loged !== true) {
+      setScreen(screens.auth);
+    } else {
+      setScreen(screens.home);
+    }
     console.log('App iniciado');
-  }, []); 
+  }, []);
 
   return (
-    <View style={{
-      paddingTop: insets.top,
-      paddingBottom: insets.bottom,
-      paddingLeft: insets.left,
-      paddingRight: insets.right,
-      flex: 1,
-      backgroundColor: background,
-    }}>
+    <View
+      style={{
+        paddingTop: insets.top,
+        paddingBottom: insets.bottom,
+        paddingLeft: insets.left,
+        paddingRight: insets.right,
+        flex: 1,
+        backgroundColor: background,
+      }}
+    >
       {screen === screens.auth && <Auth />}
       {screen === screens.home && <Home />}
       {screen === screens.catalog && <Catalog />}
@@ -36,8 +43,6 @@ function MainContent() {
     </View>
   );
 }
-
-
 
 export default function Main() {
   return (

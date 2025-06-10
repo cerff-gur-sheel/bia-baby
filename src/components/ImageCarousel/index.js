@@ -12,14 +12,12 @@ const ImageCarousel = ({ images }) => {
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
-        renderItem={({ item }) => {
-          console.log('image item:', item , " ");
-          return (
-            <View style={styles.imageContainer}>
-              <Image source={item} style={styles.image} />
-            </View>
-          );
-        }}/>
+        renderItem={({ item }) => (
+          <View style={styles.imageContainer}>
+            <Image source={item} style={styles.image} />
+          </View>
+        )}
+      />
     </View>
   );
 };

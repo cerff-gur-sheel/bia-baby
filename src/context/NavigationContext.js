@@ -16,7 +16,8 @@ const NavigationContext = createContext({
 
 export const NavigationProvider = ({ children }) => {
   const [screen, setScreen] = useState(screens.home);
-  const [props, setProps] = useState({})
+  const [props, setProps] = useState({});
+
   return (
     <NavigationContext.Provider value={{ screen, setScreen, props, setProps }}>
       {children}

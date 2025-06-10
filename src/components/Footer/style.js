@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { catalog } from "../../styles/colors";
 
 export const View = styled.View`
   position: absolute;

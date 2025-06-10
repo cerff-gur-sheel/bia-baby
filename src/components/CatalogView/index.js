@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import SearchBar from "../SearchBar";
 import Footer from '../Footer';
 
-
 export default function CatalogView({
 	children,
 	searchBar = false,
