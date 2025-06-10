@@ -11,7 +11,14 @@ export default function Product() {
 
     return (
         <ProductView footer={true} searchBar={true} barColor="#63C683" footerColor="#63C683">
-            <Text style={{ fontSize: 15, fontWeight: 'bold', marginTop: 85, marginLeft: 15, color: '#808080' }}> Enviar para CIDADE - CEP </Text>
+            <Text style={{ 
+              fontSize: 15, 
+              fontWeight: 'bold', 
+              marginTop: 85, 
+              marginLeft: 15, 
+              color: '#808080' }}> 
+              Enviar para CIDADE - CEP 
+            </Text>
             <CardProduct />
         </ProductView>
     );

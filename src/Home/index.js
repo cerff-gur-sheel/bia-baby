@@ -17,9 +17,12 @@ import photo2 from '../../assets/biababylogo.jpg';
 import photo3 from '../../assets/biababylogo.jpg';
 
 const images = [photo1, photo2, photo3];
+import { useNavigation, screens } from '../context/NavigationContext';
+
 
 export default function Home() {
   const { background, setBackground } = useContext(BackgroundContext);
+  const { setScreen } = useNavigation();
   useEffect(() => { setBackground(home.bars_background) }, []);
 
   return (
@@ -27,8 +30,10 @@ export default function Home() {
       <Container>
         <ImageCarousel images={images} />        
         <CategoryContainer>
-          <CategoryButton image={clotches} categoryName={"Roupas Infantis"} />
-          <CategoryButton image={party} categoryName={"Artigos para Festa"} />
+          <CategoryButton image={clotches} categoryName={"Roupas Infantis"} 
+            onPress={() => setScreen(screens.catalog)}/>
+          <CategoryButton image={party} categoryName={"Artigos para Festa"} 
+            onPress={() => setScreen(screens.catalog)}/>
         </CategoryContainer>
       </Container>
     </CatalogView>
