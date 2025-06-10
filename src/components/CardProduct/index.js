@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
     ButtonAddToCart,
     ButtonBuy,
@@ -11,23 +11,12 @@ import {
     ButtonTextCart
 } from "./style";
 
-import { Fashion } from "../../mocks/Products";
+import { useNavigation } from "../../context/NavigationContext";
 
 export default function CardProduct() {
-
-    const [selectedProduct, setSelectedProduct] = useState(null);
-
-    // Simulando seleção automática de um produto com ID 1 (teste temporário)
-    useEffect(() => {
-        handleSelectedProduct(1)
-    }, []);
-
-    function handleSelectedProduct(id) {
-        const product = Fashion.find(item => item.id === id);
-        setSelectedProduct(product);
-    }
-
-    if (!selectedProduct) return null; // ou loading...
+    const { props } = useNavigation();
+    const [selectedProduct ] = useState(props.product);
+    console.log(selectedProduct)
 
     return (
         <ProductView>
@@ -40,7 +29,7 @@ export default function CardProduct() {
             <ButtonBuy>
                 <ButtonTextBuy> Comprar Agora </ButtonTextBuy>
             </ButtonBuy>
-            <ProductDescription style={{ fontWeight: "bold" }}>Descrição do produto: </ProductDescription>
+            <ProductDescription style={{ fontWeight: "bold" }}> Descrição do produto: </ProductDescription>
             <ProductDescription>{selectedProduct.description || "Sem descrição disponível"} </ProductDescription>
         </ProductView>
     );

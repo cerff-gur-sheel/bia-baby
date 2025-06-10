@@ -14,13 +14,12 @@ import {
 import { useNavigation, screens } from '../../context/NavigationContext';
 
 export default function CatalogProduct() {
-  const { setScreen, props } = useNavigation();
+  const { setScreen, props, setProps } = useNavigation();
   const [catalogProduct ] = useState(props.category);
   
   function callPurchaseScreen(catalogProduct) {
     setScreen(screens.product);
-    // setScreen(screens.product)
-    alert(`vocé comprou o produto: ${catalogProduct.name}`)
+    setProps({product: catalogProduct});
   }
   return (
     <CatalogListContainer
@@ -35,7 +34,7 @@ export default function CatalogProduct() {
           <CatalogInfo>
             <CatalogName>{item.name}</CatalogName>
             <CatalogPrice>R$ {item.price.toFixed(2).replace('.', ',')}</CatalogPrice>
-            <CatalogButton onPress={() => callPurchaseScreen(item)}>
+            <CatalogButton onPress={() => {callPurchaseScreen(item)}}>
               <CatalogButtonText> Comprar </CatalogButtonText>
             </CatalogButton>
           </CatalogInfo>

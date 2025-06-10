@@ -1,8 +1,19 @@
-
-
 export const Fashion = [
-    { id: 1, name: 'Body Ursinho Azul', image: require('../../assets/Product1.png'), price: 59.90, review: 4.5, description: 'Camisa 100% algodão, ideal para o verão.' },
-    { id: 2, name: 'Produto 2', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
+    { 
+      id: 1, 
+      name: 'Body Ursinho Azul', 
+      image: require('../../assets/Product1.png'), 
+      price: 59.90, 
+      review: 4.5, 
+      description: 'Camisa 100% algodão, ideal para o verão.' 
+    },
+    { 
+      id: 2, 
+      name: 'Produto 2', 
+      image: require('../../assets/ImagePlaceHolder.png'), 
+      price: 0, 
+      review: 0, 
+      description: '' },
     { id: 3, name: 'Produto 3', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
     { id: 4, name: 'Produto 4', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
     { id: 5, name: 'Produto 5', image: require('../../assets/ImagePlaceHolder.png'), price: 0, review: 0, description: '' },
