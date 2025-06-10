@@ -19,7 +19,7 @@ function MainContent() {
   const insets = useSafeAreaInsets();
   const { background } = useContext(BackgroundContext);
 
-  const [screen, setScreeen] = useState(screens.product)
+  const [screen, setScreeen] = useState(screens.catalog)
 
   return (
     <View style={{

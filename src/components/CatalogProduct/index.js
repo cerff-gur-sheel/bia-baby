@@ -11,7 +11,7 @@ import {
   CatalogButtonText
 } from "./style";
 
-import { Fashion } from "../../mocks/Products";
+import { Fashion, Party } from "../../mocks/Products";
 
 export default function CatalogProduct() {
   const [catalogProduct, setCatalogProduct] = useState(Fashion);
