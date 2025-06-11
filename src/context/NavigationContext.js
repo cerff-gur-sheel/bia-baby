@@ -14,7 +14,7 @@ const NavigationContext = createContext({
   setProps: () => {},
 });
 
-export const NavigationProvider = ({ children }) => {
+export const NavigationProvider = ({children}) => {
   const [screen, setScreen] = useState(screens.home);
   const [props, setProps] = useState({});
 
