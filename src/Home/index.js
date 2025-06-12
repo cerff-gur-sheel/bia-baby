@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <CatalogView footer={true} searchBar={true} barColor={PINK} footerColor={PINK}>
+    <CatalogView footer searchBar barColor={PINK} footerColor={PINK}>
       <Container>
         <ImageCarousel images={images} />
         <CategoryContainer>
