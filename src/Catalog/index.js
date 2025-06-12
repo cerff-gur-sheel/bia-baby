@@ -24,7 +24,7 @@ export default function Catalog() {
   const { setScreen, props, setProps } = useNavigation();
   const [catalogProduct] = useState(props.category);
 
-  function callPurchaseScreen(catalogProduct) {
+  function callProductScreen(catalogProduct) {
     setScreen(screens.product);
     setProps({ product: catalogProduct });
   }
@@ -43,7 +43,7 @@ export default function Catalog() {
             <CatalogInfo>
               <CatalogName>{item.name}</CatalogName>
               <CatalogPrice>R$ {item.price.toFixed(2).replace('.', ',')}</CatalogPrice>
-              <CatalogButton onPress={() => { callPurchaseScreen(item) }}>
+              <CatalogButton onPress={() => { callProductScreen(item) }}>
                 <CatalogButtonText> Comprar </CatalogButtonText>
               </CatalogButton>
             </CatalogInfo>

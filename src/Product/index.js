@@ -16,18 +16,21 @@ import {
   ButtonTextCart
 } from "./style";
 
-import { useNavigation } from "../context/NavigationContext";
+import { screens, useNavigation } from "../context/NavigationContext";
 
 export default function Product() {
-  const { background, setBackground } = useContext(BackgroundContext);
+  const { setBackground } = useContext(BackgroundContext);
+  useEffect(() => { setBackground(home.bars_background) }, []);
 
-  useEffect(() => {
-    setBackground(home.bars_background);
-  }, []);
-
-  const { props } = useNavigation();
+  const { setScreen, props, setProps } = useNavigation();
   const [selectedProduct] = useState(props.product);
   console.log(selectedProduct)
+
+
+  function callCartScreen() {
+    setScreen(screens.cart);
+  }
+
   return (
     <ProductView
       footer={true}
@@ -53,7 +56,7 @@ export default function Product() {
         <ButtonAddToCart>
           <ButtonTextCart>Adicionar ao Carrinho</ButtonTextCart>
         </ButtonAddToCart>
-        <ButtonBuy>
+        <ButtonBuy onPress={() => callCartScreen()}>
           <ButtonTextBuy>Comprar Agora</ButtonTextBuy>
         </ButtonBuy>
         <ProductDescription style={{ fontWeight: "bold" }}>

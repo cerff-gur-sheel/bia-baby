@@ -18,7 +18,7 @@ import photo3 from '../../assets/biababylogo.jpg';
 const images = [photo1, photo2, photo3];
 
 import { useNavigation, screens } from '../context/NavigationContext';
-import { Fashion } from "../mocks/Products";
+import { Fashion, Party } from "../mocks/Products";
 
 export default function Home() {
   const { setBackground } = useContext(BackgroundContext);
@@ -46,7 +46,7 @@ export default function Home() {
             categoryName={"Artigos para Festa"}
             onPress={() => {
               setScreen(screens.catalog);
-              setProps({ category: Fashion });
+              setProps({ category: Party });
             }}
           />
         </CategoryContainer>
