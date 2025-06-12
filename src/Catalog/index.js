@@ -49,8 +49,6 @@ export default function Catalog() {
             </CatalogInfo>
           </CatalogCard>
         )} />
-    <CatalogView footer={true} searchBar={true} backButton={true} barColor='#63C683' footerColor='#63C683'>
-      <CatalogProduct />
     </CatalogView>
   );
 }
