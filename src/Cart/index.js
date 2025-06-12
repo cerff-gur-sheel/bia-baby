@@ -6,6 +6,7 @@ import { home } from "../styles/colors";
 
 import {
     CardContainer,
+    ProductListWrapper,
     ProductRow,
     ProductImage,
     ProductInfo,
@@ -22,7 +23,8 @@ import {
     ButtonRow,
     PixButtonContainer,
     PaymentButton,
-    FinalizeButton
+    FinalizeButton,
+    PixButton
 } from './style';
 
 import { useNavigation } from "../context/NavigationContext";
@@ -40,35 +42,38 @@ export default function Cart() {
         <CartView footer={true} searchBar={true} barColor="#63C683" footerColor="#63C683">
             <Text style={{ fontSize: 22, fontWeight: 'bold', textAlign: 'center', marginTop: 85 }}> Carrinho de Compras </Text>
             <CardContainer>
-                <FlatList
-                    data={cartProduct}
-                    showsVerticalScrollIndicator={false}
-                    keyExtractor={(item) => item.id.toString()}
-                    renderItem={({ item }) => (
-                        <ProductRow>
-                            <ProductImage source={item.image} />
-                            <ProductInfo>
-                                <ProductName> {item.name} </ProductName>
-                                <ProductPrice> R$ {item.price.toFixed(2).replace('.', ',')} </ProductPrice>
-                                <QuantityControl>
-                                    <ControlButton><Text>-</Text></ControlButton>
-                                    <Text> quantidade </Text>
-                                    <ControlButton><Text>+</Text></ControlButton>
-                                </QuantityControl>
-                            </ProductInfo>
-                        </ProductRow>
-                    )}
-                />
+
+                <ProductListWrapper>
+                    <FlatList
+                        data={cartProduct}
+                        showsVerticalScrollIndicator={false}
+                        keyExtractor={(item) => item.id.toString()}
+                        renderItem={({ item }) => (
+                            <ProductRow>
+                                <ProductImage source={item.image} />
+                                <ProductInfo>
+                                    <ProductName> {item.name} </ProductName>
+                                    <ProductPrice> R$ {item.price.toFixed(2).replace('.', ',')} </ProductPrice>
+                                    <QuantityControl>
+                                        <ControlButton><Text>-</Text></ControlButton>
+                                        <Text> 1 </Text>
+                                        <ControlButton><Text>+</Text></ControlButton>
+                                    </QuantityControl>
+                                </ProductInfo>
+                            </ProductRow>
+                        )}
+                    />
+                </ProductListWrapper>
 
                 <SummaryContainer>
                     <SummaryLeft>
-                        <Text>Frente:</Text>
-                        <Text>Total:</Text>
-                        <Text>Pagamento</Text>
+                        <Text style={{ fontWeight: 'bold' }}>Frete</Text>
+                        <Text style={{ fontWeight: 'bold' }}>Total</Text>
+                        <Text style={{ fontWeight: 'bold' }}>Pagamento</Text>
                     </SummaryLeft>
                     <SummaryRight>
-                        <Text>PreçoFrente</Text>
-                        <Text>PreçoTotal</Text>
+                        <Text style={{ fontWeight: 'bold' }}>R$ 00,00</Text>
+                        <Text style={{ fontWeight: 'bold' }}>R$ 00,00</Text>
                         <PaymentIcons>
                             <PayIcon source={require('../../assets/visa.png')} />
                             <PayIcon source={require('../../assets/boleto.png')} />
@@ -79,14 +84,12 @@ export default function Cart() {
 
                 <ButtonSection>
                     <ButtonRow>
-                        <PaymentButton><Text>Cartão de Crédito</Text></PaymentButton>
-                        <PaymentButton><Text>Cartão de Débito</Text></PaymentButton>
+                        <PaymentButton><Text style={{ fontWeight: 'bold' }}>Cartão de Crédito</Text></PaymentButton>
+                        <PaymentButton><Text style={{ fontWeight: 'bold' }}>Cartão de Débito</Text></PaymentButton>
                     </ButtonRow>
 
                     <PixButtonContainer>
-                        <PaymentButton style={{ width: '60%' }}>
-                            <Text>Pix</Text>
-                        </PaymentButton>
+                        <PixButton><Text style={{ fontWeight: 'bold' }}>Pix</Text></PixButton>
                     </PixButtonContainer>
 
                     <FinalizeButton>

@@ -6,12 +6,16 @@ export const CardContainer = styled.View`
   padding: 16px;
   border-radius: 12px;
   elevation: 3;
-  height: 620px;
-  justify-content: space-between;
+  min-height: 600px;
+`;
+
+export const ProductListWrapper = styled.View`
+  height: 280px;
+  margin-bottom: 20px;
 `;
 
 export const ProductListContainer = styled.View`
-  height: 180px;
+  height: 260px;
 `;
 
 export const ProductRow = styled.View`
@@ -23,6 +27,8 @@ export const ProductImage = styled.Image`
   width: 70px;
   height: 70px;
   border-radius: 8px;
+  align-self: center;
+  resizeMode: center;
 `;
 
 export const ProductInfo = styled.View`
@@ -55,7 +61,8 @@ export const ControlButton = styled.TouchableOpacity`
 export const SummaryContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  margin-vertical: 20px;
+  margin-top: 4px;
+  margin-bottom: 0px;
 `;
 
 export const SummaryLeft = styled.View`
@@ -76,10 +83,12 @@ export const PaymentIcons = styled.View`
 export const PayIcon = styled.Image`
   width: 32px;
   height: 32px;
+  align-self: center;
+  resizeMode: center;
 `;
 
 export const ButtonSection = styled.View`
-  margin-top: 10px;
+  margin-top: 4px;
   gap: 10px;
 `;
 
@@ -90,7 +99,8 @@ export const ButtonRow = styled.View`
 
 export const PixButtonContainer = styled.View`
   align-items: center;
-  margin-top: 8px;
+  margin-top: 4px;
+  width: 100%;
 `;
 
 export const PaymentButton = styled.TouchableOpacity`
@@ -101,10 +111,20 @@ export const PaymentButton = styled.TouchableOpacity`
   align-items: center;
 `;
 
+export const PixButton = styled.TouchableOpacity`
+  background-color: #e0e0e0;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  align-items: center;
+  margin-top: 4px; 
+`;
+
 export const FinalizeButton = styled.TouchableOpacity`
   background-color: #3CB371;
   padding: 14px;
   border-radius: 8px;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 4px;
+  width: 100%;
 `;

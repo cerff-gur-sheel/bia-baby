@@ -16,7 +16,7 @@ import {
   ButtonTextCart
 } from "./style";
 
-import { useNavigation } from "../context/NavigationContext";
+import { screens, useNavigation } from "../context/NavigationContext";
 
 export default function Product() {
   const { setBackground } = useContext(BackgroundContext);
