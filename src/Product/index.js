@@ -15,21 +15,26 @@ import {
   ButtonTextCart
 } from "./style";
 
+import { screens, useNavigation } from "../context/NavigationContext";
 import { useNavigation } from "../context/NavigationContext";
 
 export default function Product() {
   const { setBackground } = useContext(BackgroundContext);
 
-  useEffect(() => {
-    setBackground(home.bars_background);
-  }, []);
-
-  const { props } = useNavigation();
+  const { setScreen, props, setProps } = useNavigation();
   const [selectedProduct] = useState(props.product);
   console.log(selectedProduct)
+
+
+  function callCartScreen() {
+    setScreen(screens.cart);
+  }
+
   return (
+
     <CatalogView footer searchBar backButton barColor="#63C683" footerColor="#63C683">
       {/* <Text
+        main
         style={{
           fontSize: 15,
           fontWeight: 'bold',
@@ -47,7 +52,7 @@ export default function Product() {
         <ButtonAddToCart>
           <ButtonTextCart>Adicionar ao Carrinho</ButtonTextCart>
         </ButtonAddToCart>
-        <ButtonBuy>
+        <ButtonBuy onPress={() => callCartScreen()}>
           <ButtonTextBuy>Comprar Agora</ButtonTextBuy>
         </ButtonBuy>
         <ProductDescription style={{ fontWeight: "bold" }}>
