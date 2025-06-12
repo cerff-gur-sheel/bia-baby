@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const ProductView = styled.View`
+export const ProductCardView = styled.View`
   width: 90%;
   max-width: 350px;
   min-height: 75%;

@@ -8,6 +8,7 @@ import Home from '../Home';
 import Auth from '../Auth';
 import Catalog from '../Catalog';
 import Product from '../Product';
+import Cart from '../Cart';
 
 var loged = true;
 
@@ -40,6 +41,7 @@ function MainContent() {
       {screen === screens.home && <Home />}
       {screen === screens.catalog && <Catalog />}
       {screen === screens.product && <Product />}
+      {screen === screens.cart && <Cart />}
     </View>
   );
 }
