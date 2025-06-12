@@ -9,4 +9,6 @@ export async function initializeDatabase(database) {
       create_date TIMESTAMP DEFAULT (datetime('now','localtime'))
     );
   `);
+
+  console.log("Database initialized successfully.");
 }

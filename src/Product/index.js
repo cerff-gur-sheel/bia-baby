@@ -16,10 +16,8 @@ import {
 } from "./style";
 
 import { screens, useNavigation } from "../context/NavigationContext";
-import { useNavigation } from "../context/NavigationContext";
 
 export default function Product() {
-  const { setBackground } = useContext(BackgroundContext);
 
   const { setScreen, props, setProps } = useNavigation();
   const [selectedProduct] = useState(props.product);
