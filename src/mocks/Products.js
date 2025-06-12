@@ -1,4 +1,3 @@
-
 export const Fashion = [
     { id: 1, name: 'Body Ursinho Azul', image: require('../../assets/Product1.png'), price: 59.90, review: 4.5, description: 'Camisa 100% algodão, ideal para o verão.' },
     { id: 2, name: 'Jaqueta infantil Puffer Bolsos', image: require('../../assets/Product2.png'), price: 99.90, review: 4.2, description: 'Jaqueta infantil Puffer Bolsos Marisa Tam 4 a 10.' },

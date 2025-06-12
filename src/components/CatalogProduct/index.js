@@ -12,11 +12,15 @@ import {
 } from "./style";
 
 import { Fashion, Party } from "../../mocks/Products";
+import { useNavigation, screens } from '../../context/NavigationContext';
 
 export default function CatalogProduct() {
-  const [catalogProduct, setCatalogProduct] = useState(Fashion);
+  const { setScreen, props, setProps } = useNavigation();
+  const [catalogProduct ] = useState(props.category);
+  
   function callPurchaseScreen(catalogProduct) {
-    alert(`vocé comprou o produto: ${catalogProduct.name}`)
+    setScreen(screens.product);
+    setProps({product: catalogProduct});
   }
   return (
     <CatalogListContainer
@@ -25,19 +29,16 @@ export default function CatalogProduct() {
       keyExtractor={item => item.id.toString()}
       renderItem={({ item }) => (
         <CatalogCard>
-
           <ImageWrapper>
             <CatalogImage source={item.image} />
           </ImageWrapper>
-          
           <CatalogInfo>
             <CatalogName>{item.name}</CatalogName>
             <CatalogPrice>R$ {item.price.toFixed(2).replace('.', ',')}</CatalogPrice>
-            <CatalogButton onPress={() => callPurchaseScreen(item)}>
+            <CatalogButton onPress={() => {callPurchaseScreen(item)}}>
               <CatalogButtonText> Comprar </CatalogButtonText>
             </CatalogButton>
           </CatalogInfo>
-
         </CatalogCard>
       )} />
   );

@@ -1,21 +1,10 @@
+import { View, Container, LogoImage, EnterButton, TextInput } from "./style";
 import { useState } from "react"
-
 import { Text } from "../components/Text";
-import { 
-  View, 
-  Container, 
-  LogoImage, 
-  EnterButton,
-  TextInput } from "./style";
-
 import IconTextInput from "../components/IconTextInput";
-
 import { BackgroundContext } from '../context/BackgroundProvider';
 import { useContext, useEffect } from 'react';
-
-
 import google from '../../assets/google.png';
-
 import logo from '../../assets/biababylogo.jpg';
 import avatar from '../../assets/avatar.png';
 import { auth, button } from "../styles/colors";
@@ -53,7 +42,7 @@ function Home() {
 }
 
 function Login() {
-	const { background, setBackground } = useContext(BackgroundContext);
+	const {setBackground} = useContext(BackgroundContext);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
