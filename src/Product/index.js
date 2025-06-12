@@ -17,6 +17,7 @@ import {
 
 import { screens, useNavigation } from "../context/NavigationContext";
 
+
 export default function Product() {
 
   const { setScreen, props, setProps } = useNavigation();
