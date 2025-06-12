@@ -2,8 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Text } from 'react-native';
 import { BackgroundContext } from "../context/BackgroundProvider";
 import { home } from "../styles/colors";
-import ProductView from "../components/ProductView";
-
+import CatalogView from "../components/CatalogView";
 import {
   ButtonAddToCart,
   ButtonBuy,
@@ -19,7 +18,7 @@ import {
 import { useNavigation } from "../context/NavigationContext";
 
 export default function Product() {
-  const { background, setBackground } = useContext(BackgroundContext);
+  const { setBackground } = useContext(BackgroundContext);
 
   useEffect(() => {
     setBackground(home.bars_background);
@@ -29,13 +28,13 @@ export default function Product() {
   const [selectedProduct] = useState(props.product);
   console.log(selectedProduct)
   return (
-    <ProductView
+    <CatalogView
       footer={true}
       searchBar={true}
       barColor="#63C683"
       footerColor="#63C683"
     >
-      <Text
+      {/* <Text
         style={{
           fontSize: 15,
           fontWeight: 'bold',
@@ -45,7 +44,7 @@ export default function Product() {
         }}
       >
         Enviar para CIDADE - CEP
-      </Text>
+      </Text> */}
       <ProductCardView>
         <ProductImage source={selectedProduct.image} />
         <ProductTitle>{selectedProduct.name}</ProductTitle>
@@ -63,6 +62,6 @@ export default function Product() {
           {selectedProduct.description || "Sem descrição disponível"}
         </ProductDescription>
       </ProductCardView>
-    </ProductView>
+    </CatalogView>
   );
 }
