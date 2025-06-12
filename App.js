@@ -1,7 +1,7 @@
 import { useFonts } from "expo-font";
 import { SQLiteProvider } from "expo-sqlite";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-
+import { initializeDatabase } from "./src/database/initializeDatabase";
 import Main from "./src/Main";
 
 
@@ -17,7 +17,7 @@ export default function App() {
   // }
 
   return (
-    <SQLiteProvider databaseName="test.db" onInit={() => console.log("initialize database")}>
+    <SQLiteProvider databaseName='initializedatabase.db' onInit={initializeDatabase}>
       <SafeAreaProvider>
         <Main />
       </SafeAreaProvider>
