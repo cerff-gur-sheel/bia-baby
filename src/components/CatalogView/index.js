@@ -7,7 +7,8 @@ export default function CatalogView({
 	children,
 	searchBar = false,
 	footer = false,
-	barColor = '#ffff',
+	backButton = false,
+  barColor = '#ffff',
 	footerColor = '#ffff'
 }) {
 	return (
@@ -15,8 +16,13 @@ export default function CatalogView({
 			flex: 1,
 			backgroundColor: '#ffff'
 		}}>
-			{searchBar && <SearchBar backgroundColor={barColor} />}
-			{children}
+			{searchBar && <SearchBar backButton={backButton} backgroundColor={barColor} />} 
+			<View style={{
+        flex: 1,
+        marginTop: searchBar ? 75 : 0,
+      }}>
+        {children}
+      </View>
 			{footer && <Footer backgroundColor={footerColor} />}
 		</View>
 	);
