@@ -28,12 +28,7 @@ export default function Product() {
   const [selectedProduct] = useState(props.product);
   console.log(selectedProduct)
   return (
-    <CatalogView
-      footer={true}
-      searchBar={true}
-      barColor="#63C683"
-      footerColor="#63C683"
-    >
+    <CatalogView footer searchBar backButton barColor="#63C683" footerColor="#63C683">
       {/* <Text
         style={{
           fontSize: 15,

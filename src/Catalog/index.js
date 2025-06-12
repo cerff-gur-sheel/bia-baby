@@ -30,7 +30,7 @@ export default function Catalog() {
   }
 
   return (
-    <CatalogView footer={true} searchBar={true} barColor='#63C683' footerColor='#63C683'>
+    <CatalogView footer searchBar backButton barColor='#63C683' footerColor='#63C683'>
       <CatalogListContainer
         data={catalogProduct}
         showsVerticalScrollIndicator={false}
