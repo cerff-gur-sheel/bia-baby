@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { FlatList, Text } from 'react-native';
 import { BackgroundContext } from "../context/BackgroundProvider";
-import CartView from "../components/CartView";
+import CatalogView from "../components/CatalogView";
 import { home } from "../styles/colors";
 
 import {
@@ -39,8 +39,8 @@ export default function Cart() {
     console.log('');
 
     return (
-        <CartView footer={true} searchBar={true} barColor="#63C683" footerColor="#63C683">
-            <Text style={{ fontSize: 22, fontWeight: 'bold', textAlign: 'center', marginTop: 85 }}> Carrinho de Compras </Text>
+        <CatalogView footer searchBar backButton barColor='#63C683' footerColor='#63C683'>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', textAlign: 'center', marginTop: 25 }}> Carrinho de Compras </Text>
             <CardContainer>
 
                 <ProductListWrapper>
@@ -98,6 +98,6 @@ export default function Cart() {
                 </ButtonSection>
 
             </CardContainer>
-        </CartView>
+        </CatalogView>
     );
 }
