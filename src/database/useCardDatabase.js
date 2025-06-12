@@ -1,5 +1,4 @@
-import { useSQLiteContext } from "expo-sqlite";
-
+// Em useCardDatabase.ts
 export function useCardDatabase() {
   const { database } = useSQLiteContext();
 
@@ -22,6 +21,7 @@ export function useCardDatabase() {
       [cardId]
     );
   }
+
   async function decrementCardQuantity(cardId) {
     const result = await database.execAsync(
       `SELECT quantity FROM cards WHERE id = ?`,
@@ -34,10 +34,10 @@ export function useCardDatabase() {
         [cardId]
       );
     }
+  }
 
-    async function deleteCard(cardId) {
-      await database.execAsync(`DELETE FROM cards WHERE id = ?`, [cardId]);
-    }
+  async function deleteCard(cardId) {
+    await database.execAsync(`DELETE FROM cards WHERE id = ?`, [cardId]);
   }
 
   return {

@@ -2430,10 +2430,10 @@ expo-modules-core@2.3.13:
   dependencies:
     invariant "^2.2.4"
 
-expo-sqlite@~15.2.10:
-  version "15.2.10"
-  resolved "https://registry.yarnpkg.com/expo-sqlite/-/expo-sqlite-15.2.10.tgz#fa1a5d7cd29ab011cf6807f7cc9f9d1310ab4cbc"
-  integrity sha512-F7IYvXSOh3vIqhRkmaUvIP595Oqh8888CV5wpys94/437LkMYAOzMnqoscr+TCCmcO9XWURsMbBGsCVPHanlYQ==
+expo-sqlite@^15.2.13-canary-20250612-338ef55:
+  version "15.2.13-canary-20250612-338ef55"
+  resolved "https://registry.yarnpkg.com/expo-sqlite/-/expo-sqlite-15.2.13-canary-20250612-338ef55.tgz#c91b75bd93e2ec9ec5b707f5f361814bf43cb99e"
+  integrity sha512-xz3PDZjij+vRzZ2OUb3LanmlRYz6wPzVs8XM6cvKU5pSy2Q5TmO6Ee8OgA6B1p6v0S9l5bCZ89Z9NEKfxhG3kg==
   dependencies:
     await-lock "^2.2.2"
 

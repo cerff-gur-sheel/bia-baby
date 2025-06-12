@@ -1,4 +1,4 @@
-import { useFonts } from "expo-font";
+// import { useFonts } from "expo-font";
 import { SQLiteProvider } from "expo-sqlite";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { initializeDatabase } from "./src/database/initializeDatabase";
