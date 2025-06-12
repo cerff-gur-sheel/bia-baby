@@ -11,7 +11,7 @@ export default function Footer({ backgroundColor }) {
     <View style={{ backgroundColor }}>
       <Button>
         <Image source={cart} />
-        <Text color={'#fff'} size={fontSize}>Carrinho</Text>
+        <Text color={'#fff'} size={fontSize}>Ínicio</Text>
       </Button>
       <Button>
         <Image source={user} />

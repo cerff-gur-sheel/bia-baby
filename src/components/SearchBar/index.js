@@ -7,6 +7,7 @@ export default function SearchBar({ backgroundColor, backButton = false, screen 
   const insets = useSafeAreaInsets();
   const { setScreen } = useNavigation();
   const handleBackButtonPress = () => {
+    console.log(screen);
     if (screen === screens.catalog) {
       setScreen(screens.home);
     } else if (screen === screens.product) {

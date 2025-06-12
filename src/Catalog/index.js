@@ -15,7 +15,7 @@ import {
   CatalogButtonText
 } from './style';
 
-import { useNavigation, screens } from '../context/NavigationContext';
+import { useNavigation, screens, screen } from '../context/NavigationContext';
 
 export default function Catalog() {
   const { setBackground } = useContext(BackgroundContext);
@@ -27,6 +27,7 @@ export default function Catalog() {
   function callPurchaseScreen(catalogProduct) {
     setScreen(screens.product);
     setProps({ product: catalogProduct });
+    console.log("the new screen: ", screen)
   }
 
   return (
