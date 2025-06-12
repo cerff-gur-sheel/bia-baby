@@ -1,10 +1,17 @@
 import styled from "styled-components";
 
 export const CatalogListContainer = styled.FlatList.attrs({
+<<<<<<< HEAD:src/Catalog/style.js
     contentContainerStyle: {
         paddingTop: 80,
         paddingBottom: 80,
     },
+=======
+  contentContainerStyle: {
+    // paddingTop: 80,     
+    paddingBottom: 80,  
+  },
+>>>>>>> origin/main:src/components/CatalogProduct/style.js
 })`
   flex: 1;
 `;
