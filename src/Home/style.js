@@ -16,5 +16,5 @@ export const Container = styled.View`
   background-color: white;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 70px;
+  /* margin-top: 70px; */
 `;

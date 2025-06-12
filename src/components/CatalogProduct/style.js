@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CatalogListContainer = styled.FlatList.attrs({
   contentContainerStyle: {
-    paddingTop: 80,     
+    // paddingTop: 80,     
     paddingBottom: 80,  
   },
 })`

@@ -9,7 +9,7 @@ export default function Catalog() {
   useEffect(() => { setBackground(home.bars_background) }, []);
 
   return (
-    <CatalogView footer={true} searchBar={true} barColor='#63C683' footerColor='#63C683'>
+    <CatalogView footer={true} searchBar={true} backButton={true} barColor='#63C683' footerColor='#63C683'>
       <CatalogProduct />
     </CatalogView>
   );
