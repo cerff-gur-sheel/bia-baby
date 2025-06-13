@@ -9,6 +9,7 @@ import Auth from '../Auth';
 import Catalog from '../Catalog';
 import Product from '../Product';
 import Cart from '../Cart';
+import Account from '../Account';
 
 var loged = true;
 
@@ -42,6 +43,7 @@ function MainContent() {
       {screen === screens.catalog && <Catalog />}
       {screen === screens.product && <Product />}
       {screen === screens.cart && <Cart />}
+      {screen === screens.account && <Account />}
     </View>
   );
 }

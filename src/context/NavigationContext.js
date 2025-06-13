@@ -5,7 +5,8 @@ export const screens = Object.freeze({
   auth: 'auth',
   catalog: 'catalog',
   product: 'product',
-  cart: 'cart'
+  cart: 'cart',
+  account: 'account'
 });
 
 const NavigationContext = createContext({
