@@ -9,9 +9,9 @@ import Auth from '../Auth';
 import Catalog from '../Catalog';
 import Product from '../Product';
 import Cart from '../Cart';
-import Account from '../Account';
+// import Account from '../Account';
 
-var loged = true;
+var loged = false;
 
 function MainContent() {
   const insets = useSafeAreaInsets();
