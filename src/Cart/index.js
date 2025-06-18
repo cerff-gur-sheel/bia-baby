@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { FlatList, Text } from 'react-native';
 import { BackgroundContext } from "../context/BackgroundProvider";
 import CatalogView from "../components/CatalogView";
-import { home } from "../styles/colors";
+import { GREEN } from "../styles/colors";
 
 import {
     CardContainer,
@@ -32,8 +32,8 @@ import { useNavigation } from "../context/NavigationContext";
 import { Party, Fashion } from '../mocks/Products';
 
 export default function Cart() {
-    const { background, setBackground } = useContext(BackgroundContext);
-    useEffect(() => { setBackground(home.bars_background) }, []);
+    const { setBackground } = useContext(BackgroundContext);
+    useEffect(() => { setBackground(GREEN) }, []);
 
     const [cartProduct] = useState(Fashion);
     console.log('');

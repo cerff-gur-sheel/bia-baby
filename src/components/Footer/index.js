@@ -4,6 +4,7 @@ import { useNavigation, screens, screen } from '../../context/NavigationContext'
 
 import user from '../../../assets/user.png'
 import cart from '../../../assets/trolley.png'
+import home from '../../../assets/home.png'
 
 const fontSize = 15;
 
@@ -25,11 +26,11 @@ export default function Footer({ backgroundColor }) {
     <View style={{ backgroundColor }}>
       <Button onPress={() => callCartScreen()}>
         <Image source={cart} />
-        <Text color={'#fff'} size={fontSize}>Ínicio</Text>
+        <Text color={'#fff'} size={fontSize}>Carrinho</Text>
       </Button>
       <Button>
-        <Image source={user} />
-        <Text color={'#fff'} size={fontSize}>Sua Conta</Text>
+        <Image source={home} />
+        <Text color={'#fff'} size={fontSize}>Ínicio</Text>
       </Button>
       <Button onPress={() => callAccountScreen()}>
         <Image source={user} />

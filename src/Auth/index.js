@@ -16,30 +16,40 @@ const authPages = Object.freeze({
 	register: 'register'
 })
 
-export default function Auth(){
-	const [page, setPage] = useState(authPages.login)
+export default function Auth() {
+	const [page, setPage] = useState(authPages.home);
 
-
-	return(
-		<View style={{backgroundColor: "white"}}>
-			{page === authPages.home && <Home />}
+	return (
+		<View style={{ backgroundColor: "white" }}>
+			{page === authPages.home && <Home setPage={setPage} />}
 			{page === authPages.login && <Login />}
 			{page === authPages.register && <Register />}
 		</View>
 	);
 }
 
-function Home() {
-	const { background, setBackground } = useContext(BackgroundContext);
-	useEffect(() => { setBackground(auth.register.backgroud); },[]);
-	console.log("aaa")
+function Home({ setPage }) {
+	const { setBackground } = useContext(BackgroundContext);
+
+	useEffect(() => {
+		setBackground(auth.register.backgroud);
+	}, []);
+
 	return (
 		<Container>
-			<Text>sei la</Text>
+			<LogoImage source={logo} />
+			<Text></Text>
+			<EnterButton onPress={() => setPage(authPages.login)}>
+				<Text color={button.text} size={16} weight={'bold'}>Entrar</Text>
+			</EnterButton>
 
+			<EnterButton onPress={() => setPage(authPages.register)}>
+				<Text color={button.text} size={16} weight={'bold'}>Cadastrar-se</Text>
+			</EnterButton>
 		</Container>
 	);
 }
+
 
 function Login() {
 	const {setBackground} = useContext(BackgroundContext);
@@ -69,14 +79,14 @@ function Login() {
 				secureTextEntry={true}/>
 			<EnterButton 
 				backgroundCOlor={button.backgroud}
-				onClick={handleLogin}>
+				onPress={handleLogin}>
 				<Text color={button.text} size={16} weight={'bold'}>Entrar</Text>
 			</EnterButton>
 			<Text color={button.backgroud}>---------------------- ou ------------------------</Text>
 			<IconButton 
 				icon={google}
 				placeholder={"Continuar com google"}
-				onClick={handleGoogleLogin}
+				onPress={handleGoogleLogin}
 				style={{
 					textColor:'black', 
 					borderColor: button.border
@@ -87,7 +97,7 @@ function Login() {
 }
 
 function Register() {
-  const { background, setBackground } = useContext(BackgroundContext);
+  const { setBackground } = useContext(BackgroundContext);
 	useEffect(() => { setBackground(auth.register.backgroud); },[]);
 	
 	return (
