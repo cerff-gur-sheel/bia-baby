@@ -1,6 +1,6 @@
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { View } from 'react-native';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { BackgroundContext, BackgroundProvider } from '../context/BackgroundProvider';
 import { NavigationProvider, useNavigation, screens } from '../context/NavigationContext';
 
@@ -9,23 +9,29 @@ import Auth from '../Auth';
 import Catalog from '../Catalog';
 import Product from '../Product';
 import Cart from '../Cart';
-// import Account from '../Account';
-
-var loged = false;
+import Account from '../Account';
 
 function MainContent() {
   const insets = useSafeAreaInsets();
   const { background } = useContext(BackgroundContext);
   const { screen, setScreen } = useNavigation();
+  const [loged, setLoged] = useState(false);
+  
+  function handleSetLoged(value) {
+    setLoged(value);
+    start();
+   }
 
-  useEffect(() => {
+  function start(){
     if (loged !== true) {
       setScreen(screens.auth);
     } else {
       setScreen(screens.home);
     }
     console.log('App iniciado');
-  }, []);
+  }
+
+  useEffect(() => { start(); }, []);
 
   return (
     <View
@@ -38,7 +44,7 @@ function MainContent() {
         backgroundColor: background,
       }}
     >
-      {screen === screens.auth && <Auth />}
+      {screen === screens.auth && <Auth setLoged={handleSetLoged} />}
       {screen === screens.home && <Home />}
       {screen === screens.catalog && <Catalog />}
       {screen === screens.product && <Product />}

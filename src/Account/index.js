@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { BackgroundContext } from '../context/BackgroundProvider';
 import CatalogView from '../components/CatalogView';
-import { home } from '../styles/colors';
+import { GREEN } from '../styles/colors';
 
 import {
     AccountCard,
@@ -19,7 +19,7 @@ import { useNavigation, screens } from '../context/NavigationContext';
 
 export default function Account() {
     const { setBackground } = useContext(BackgroundContext);
-    useEffect(() => { setBackground(home.bars_background) }, []);
+    useEffect(() => { setBackground(GREEN) }, []);
 
     const { setScreen, props, setProps } = useNavigation();
 

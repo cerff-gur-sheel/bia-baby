@@ -16,14 +16,14 @@ const authPages = Object.freeze({
 	register: 'register'
 })
 
-export default function Auth() {
+export default function Auth({setLoged}) {
 	const [page, setPage] = useState(authPages.home);
 
 	return (
 		<View style={{ backgroundColor: "white" }}>
 			{page === authPages.home && <Home setPage={setPage} />}
-			{page === authPages.login && <Login />}
-			{page === authPages.register && <Register />}
+			{page === authPages.login && <Login setLoged={setLoged} />}
+			{page === authPages.register && <Register setLoged={setLoged} />}
 		</View>
 	);
 }
@@ -51,12 +51,13 @@ function Home({ setPage }) {
 }
 
 
-function Login() {
+function Login({setLoged}) {
 	const {setBackground} = useContext(BackgroundContext);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
 	function handleLogin() {
+    setLoged(true);
 		console.log("login");
 	}
 
@@ -96,7 +97,7 @@ function Login() {
 	);
 }
 
-function Register() {
+function Register({setLoged}) {
   const { setBackground } = useContext(BackgroundContext);
 	useEffect(() => { setBackground(auth.register.backgroud); },[]);
 	
@@ -124,8 +125,8 @@ function Register() {
           placeholderTextColor='#fff'
           secureTextEntry={true}
           marginBottom={20}/>
-          
-        <EnterButton smallButton={true} />
+
+        <EnterButton onPress={() => setLoged(true)}  smallButton={true} />
       </Container>
 	  </View>
 	);
